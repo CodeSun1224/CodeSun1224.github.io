@@ -55,21 +55,24 @@
 		</hgroup>
 		
 		<nav>
-			<div style="font-weight:bold ;font-size:20px">阿阳在学java</div>
+			<div style="font-size:25px">阿阳在学java</div>
+		</nav>
+		<nav>
+			<div style="font-size:15px">研究僧|小菜鸡</div>
 		</nav>
 		<nav class="header-menu">
 			<ul>
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/archives/index.html">归档</a></li>
+				<li><a href="/archives/index.html">所有文章</a></li>
 	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">找文章</a>
     			
             
     			
@@ -142,7 +145,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives/index.html">归档</a></li>
+					<li style="width: 50%"><a href="/archives/index.html">所有文章</a></li>
 		        
 				</ul>
 			</nav>
@@ -172,6 +175,15 @@
         <a href="/2020/08/05/hello-world/" class="archive-article-date">
   	<time datetime="2020-08-05T02:35:36.321Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-05</time>
 </a>
+		
+		
+		
+			<span class="archive-article-date">
+				 <!--我被看了 <span id="busuanzi_value_page_pv"></span> 次-->
+			</span>
+		
+
+		
         
       </header>
     
@@ -319,6 +331,34 @@
 
 
 
+
+	
+<section id="comments" class="comments">
+  <style>
+    .comments{margin:30px;padding:10px;background:#fff}
+    @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+  </style>
+  <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'true' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "9TjBR5CaTHhqor6Lfpt47Ici-gzGzoHsz",
+            app_key: "YR2IBtl9nCW0Y9R2SzrR6ktv",
+            placeholder: "有话要说？",
+            avatar:"mm"
+        });
+    }
+</script>
+  </section>
+
+
   
   
   
@@ -344,13 +384,12 @@
 			
 			
 			<!--PV方式，单个用户连续点击 n 篇，记录 n 次记录值-->
-		    <span id="busuanzi_container_site_pv">    
+		    <span id="busuanzi_container_site_pv" style='display:none'>    
 			    本站总访问量<span id="busuanzi_value_site_pv"></span>次
 		    </span>
-			<span style="font-weight:bold">|</span>
 		    <!--UV方式，单个用户连续点击 n 篇，记录 1 次记录值-->
-		    <span id="busuanzi_container_site_uv">  
-			    本站访客数<span id="busuanzi_value_site_uv"></span>人次
+		    <span id="busuanzi_container_site_uv" style='display:none'>  
+			    本站访客数<span id="busuanzi_value_site_uv"></span>人
 		    </span>
       	</div>
     </div>
@@ -380,7 +419,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 
 
-<script  async  src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!--<script  async  src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>-->
     
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
   <div class="tools-nav header-menu">
@@ -404,7 +443,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">找文章</a></li>
       
         
       
@@ -512,7 +551,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">快工作了&lt;br&gt;&lt;br&gt;每天学一点&lt;br&gt;不断输出</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">微信：codesun1224&lt;br&gt;email：codesun1224@qq.com&lt;br&gt;很惭愧，啥都不会&lt;br&gt;只能不断学习，不断成长</div>
   	  	
     	</section>
     
