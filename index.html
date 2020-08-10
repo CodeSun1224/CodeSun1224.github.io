@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,25 +8,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>阿阳在学java</title>
+  <title>阿阳在学习</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="java技术，其它">
 <meta property="og:type" content="website">
-<meta property="og:title" content="阿阳在学java">
+<meta property="og:title" content="阿阳在学习">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="阿阳在学java">
+<meta property="og:site_name" content="阿阳在学习">
 <meta property="og:description" content="java技术，其它">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="阿阳">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="阿阳在学java" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="阿阳在学习" type="application/atom+xml">
   
   
     <link rel="icon" href="/assets/img/head.jpg">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
+  <!--头像旋转-->
+  
+	<link rel="stylesheet" type="text/css" href="/./avatarrotation.css">
+  
+  <!--头像旋转-->
   <style type="text/css">
   
     #container.show {
@@ -36,13 +43,19 @@
   
 
 <meta name="generator" content="Hexo 5.0.0"></head>
-
 <body>
+<!--aplayer相关，https://qianlei6148.github.io/-->
+   <link rel="stylesheet" href="/./dist/APlayer.min.css">
+	<div id="aplayer" style="z-index: 99999;"></div>
+	<script src="/./dist/hls.min.js"></script>
+	<script src="/./dist/APlayer.min.js"></script>
+	<script src="/./dist/musicPlay.js"></script>
+
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
+    <div class="left-col" q-class="show:isShow" style="background: url(/assets/img/img5.jpg)no-repeat 100%;background-size:cover;">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: rgba(0,0,0,0)"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -53,30 +66,32 @@
 		</hgroup>
 		
 		<nav>
-			<div style="font-size:25px">阿阳在学java</div>
-			<div style="font-size:15px">研究僧|小菜鸡</div>
+			<a href="/" style="font-size:25px">阿阳在学习</a>
+			<div style="font-size:15px ;color:white">研究僧|小菜鸡</div>
 		</nav>
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/">主页</a></li>
+				<li><a  href="/">主页</a></li>
 	        
-				<li><a href="/archives/index.html">所有文章</a></li>
+				<li><a  href="/archives">所有文章</a></li>
+	        
+				<li><a  href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">找文章</a>
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)" >找文章</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)" >友链</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)" >关于我</a>
     			
             
 		</nav>
@@ -92,6 +107,8 @@
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 			</div>
+			<!-- 网易云音乐插件 -->
+			
 		</nav>
 	</header>		
 </div>
@@ -100,7 +117,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: rgba(0,0,0,0)"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -114,6 +131,8 @@
 			</hgroup>
 			
 			
+			
+				
 			
 				
 			
@@ -136,12 +155,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives/index.html">所有文章</a></li>
+					<li style="width: 33.333333333333336%"><a href="/archives">所有文章</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -186,13 +207,50 @@
         <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
         
       
+	  
+	  <!-- 《添加版权声明 -->
+        
+            <!-- 《添加版权声明 -->
+<!--添加版权声明https://github.com/JoeyBling/hexo-theme-yilia-plus/commit/c1215e132f6d5621c5fea83d3c4f7ccbcca074a3-->
 
+
+<!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
+
+  <div class="declare" hidden="hidden"></div>
+
+<!-- 添加版权声明》 -->
+
+        
+        <!-- 添加版权声明》 -->
+	  
       
     </div>
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/hexo//" class="article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
@@ -329,6 +387,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -410,7 +472,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">微信：codesun1224&lt;br&gt;email：codesun1224@qq.com&lt;br&gt;很惭愧，啥都不会&lt;br&gt;只能不断学习，不断成长</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">微信：codesun1224&lt;br&gt;email：codesun1224@qq.com&lt;br&gt;很惭愧，啥都不会&lt;br&gt;不断学习，不断成长</div>
   	  	
     	</section>
     
@@ -484,5 +546,5 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":300,"vOffset":-50},"mobile":{"show":true,"scale":0.5},"react":{"opacity":0.5},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
